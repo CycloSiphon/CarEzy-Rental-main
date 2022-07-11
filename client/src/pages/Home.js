@@ -79,41 +79,14 @@ function Home() {
              </Row>
 
               {loading == true && (<Spinner/>)}
-
-
-              
-              {/* <Row justify='center' gutter={16}>
-
-                   {totalCars.map(car=>{
-                       return <Col lg={5} sm={24} xs={24}>
-                            <div className="car p-2 bs1">
-                               <img src={car.image} className="carimg"/>
-
-                               <div className="car-content d-flex align-items-center justify-content-between">
-
-                                    <div className='text-left pl-2'>
-                                        <p>{car.name}</p>
-                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
-                                    </div>
-
-                                    <div>
-                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
-                                    </div>
-
-                               </div>
-                            </div>
-                       </Col>
-                   })}
-
-                   
-              </Row> */}
-
+              <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
 {totalCars.map(car=>{
                        return <>
             
                                
-
-                               {/* <div class="card-deck mt-16 ml-2 mr-2">
+ {/* <div class="card-deck mt-16 ml-2 mr-2">
   <div class="card" style={{width: "400px"}}>
     <img class="card-img-top" src={car.image} className="carimg" />
     <div class="card-body">
@@ -140,7 +113,7 @@ function Home() {
   </div>
 </div> */}
 
-<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+{/* <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
   
     <div class="rounded overflow-hidden shadow bg-gray-300 ">
       <img class="w-full" src={car.image} alt="car" />
@@ -154,7 +127,7 @@ function Home() {
         </div>
       </div>
       <button className="bg-indigo-500 text-white px-4 py-2 rounded-xl"><Link to={`/booking/${car._id}`} className="text-white">Book Now</Link></button>
-    </div>
+    </div> */}
     
     {/* <div class="rounded overflow-hidden shadow bg-gray-300">
       <img class="w-full" src={car.image} alt="car" />
@@ -178,13 +151,54 @@ function Home() {
       </div>
       <button className="bg-indigo-500 text-white px-4 py-2 rounded-xl"><Link to={`/booking/${car._id}`} className="text-white">Book Now</Link></button>
     </div> */}
+  {/* </div> */}
+{/*                             
+  <div class="card ml-6 mr-6" style={{width: "400px"}}>
+    <img class="card-img-top" src={car.image} className="carimg" />
+    <div class="card-body">
+      <h5 class="card-title">{car.name}</h5>
+      <p class="card-text">Rent Per Hour {car.rentPerHour} /-</p>
+      <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
+    </div>
+  </div> */}
+
+
+      <div class="p-4 md:w-1/3 l">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-x">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={car.image} alt="blog" />
+          <div class="p-6">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3 uppercase">{car.name}</h1>
+            <p class="leading-relaxed mb-3">Rent Per Hour {car.rentPerHour} /-</p>
+            <p class="leading-relaxed mb-3">Fuel Type {car.fuelType} </p>
+            <p class="leading-relaxed mb-3">Seat Capacity {car.capacity} </p>
+            <div class="flex items-center flex-wrap ">
+            <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mx-auto "><Link to={`/booking/${car._id}`} class="text-white">Book Now</Link></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+ {/* <div class="card" style={{width: "18rem"}}>
+  <img class="card-img-top" src={car.image} alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+</div> */}
+
 
  
 <br/>
                 
                        </>
                    })}
+                   </div>
+  </div>
+</section>
 
 
 

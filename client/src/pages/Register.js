@@ -45,14 +45,14 @@ function Register() {
               label="Password"
               rules={[{ required: true,pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ }]}
             >
-              <Input />
+              <Input type = "password" />
             </Form.Item>
             <Form.Item
               name="cpassword"
               label="Confirm Password"
               rules={[{ required: true,pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ }]}
             >
-              <Input />
+              <Input type = "password" />
             </Form.Item>
 
             <button className="btn1 mt-2 mb-3">Register</button>
